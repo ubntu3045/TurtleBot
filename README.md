@@ -132,3 +132,20 @@ with `turtlebot3_house.launch.py`
 ![Screenshot from 2024-07-23 20-47-01](https://github.com/user-attachments/assets/f70b611b-97fc-4944-b422-4433080b078f)
 
 
+# Create a map with gmapping
+## Starting TIAGo simulation
+
+cd /tiago_public_ws/
+source ./devel/setup.bash
+
+In the first console launch the following simulation 
+roslaunch tiago_2dnav_gazebo tiago_mapping.launch public_sim:=true
+![Screenshot from 2024-07-24 00-24-38](https://github.com/user-attachments/assets/77369141-8893-4f71-8ee7-8a2c8dac184b)
+
+## Mapping
+rosrun key_teleop key_teleop.py
+
+By pressing the arrow keys on this console drive TIAGo around the world. The map being created will be shown. When the world has been fully mapped, as in the below example 
+![Screenshot from 2024-07-24 00-26-25](https://github.com/user-attachments/assets/5f6304c1-7346-439a-8750-6cbd0a0ffa73)
+
+
